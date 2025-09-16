@@ -44,7 +44,19 @@ chrome.runtime.onMessage.addListener((msg) => {
             var mod = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["NDmK"]]]);
             if (mod && mod.default && mod.default.embed_pop) {
               mod.default.embed_pop.enable_youtube = ${enable};
-              console.log('[Zalo-F12-Tools] Embed YouTube ${enable ? 'ON' : 'OFF'}');
+              var msg = '[Zalo-F12-Tools] Embed YouTube ${enable ? 'ON' : 'OFF'}';
+              window.console && window.console.log(msg);
+              try {
+                var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+                if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                  var windowId = '1';
+                  ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                    textKey: msg,
+                    type: ToastNS.TOAST_TYPE.INFO,
+                    duration: 2000
+                  });
+                }
+              } catch (_) {}
             } else {
               console.log('[Zalo-F12-Tools] NDmK module or embed_pop not found');
             }
@@ -67,7 +79,19 @@ chrome.runtime.onMessage.addListener((msg) => {
             var mod = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["NDmK"]]]);
             if (mod && mod.default && mod.default.embed_pop) {
               mod.default.embed_pop.enable_soundcloud = ${enable};
-              console.log('[Zalo-F12-Tools] Embed SoundCloud ${enable ? 'ON' : 'OFF'}');
+              var msg = '[Zalo-F12-Tools] Embed SoundCloud ${enable ? 'ON' : 'OFF'}';
+              window.console && window.console.log(msg);
+              try {
+                var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+                if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                  var windowId = '1';
+                  ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                    textKey: msg,
+                    type: ToastNS.TOAST_TYPE.INFO,
+                    duration: 2000
+                  });
+                }
+              } catch (_) {}
             } else {
               console.log('[Zalo-F12-Tools] NDmK module or embed_pop not found');
             }
@@ -90,7 +114,19 @@ chrome.runtime.onMessage.addListener((msg) => {
             var mod = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["NDmK"]]]);
             if (mod && mod.default && mod.default.embed_pop) {
               mod.default.embed_pop.enable_settings = ${enable};
-              console.log('[Zalo-F12-Tools] Embed Settings ${enable ? 'ON' : 'OFF'}');
+              var msg = '[Zalo-F12-Tools] Embed Settings ${enable ? 'ON' : 'OFF'}';
+              window.console && window.console.log(msg);
+              try {
+                var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+                if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                  var windowId = '1';
+                  ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                    textKey: msg,
+                    type: ToastNS.TOAST_TYPE.INFO,
+                    duration: 2000
+                  });
+                }
+              } catch (_) {}
             } else {
               console.log('[Zalo-F12-Tools] NDmK module or embed_pop not found');
             }
@@ -117,7 +153,19 @@ chrome.runtime.onMessage.addListener((msg) => {
               } else {
                 mod.default.embed_pop.mp3_domain = '';
               }
-              console.log('[Zalo-F12-Tools] Embed Zing MP3 ${enable ? 'ON' : 'OFF'}');
+              var msg = '[Zalo-F12-Tools] Embed Zing MP3 ${enable ? 'ON' : 'OFF'}';
+              window.console && window.console.log(msg);
+              try {
+                var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+                if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                  var windowId = '1';
+                  ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                    textKey: msg,
+                    type: ToastNS.TOAST_TYPE.INFO,
+                    duration: 2000
+                  });
+                }
+              } catch (_) {}
             } else {
               console.log('[Zalo-F12-Tools] NDmK module or embed_pop not found');
             }
@@ -140,7 +188,19 @@ chrome.runtime.onMessage.addListener((msg) => {
             var mod = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["NDmK"]]]);
             if (mod && mod.default) {
               mod.default.enable_photoviewer_popup = ${enable};
-              console.log('[Zalo-F12-Tools] PhotoViewer Popup ${enable ? 'ON' : 'OFF'}');
+              var msg = '[Zalo-F12-Tools] PhotoViewer Popup ${enable ? 'ON' : 'OFF'}';
+              window.console && window.console.log(msg);
+              try {
+                var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+                if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                  var windowId = '1';
+                  ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                    textKey: msg,
+                    type: ToastNS.TOAST_TYPE.INFO,
+                    duration: 2000
+                  });
+                }
+              } catch (_) {}
             } else {
               console.log('[Zalo-F12-Tools] NDmK module not found');
             }
@@ -163,7 +223,19 @@ chrome.runtime.onMessage.addListener((msg) => {
             var mod = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["NDmK"]]]);
             if (mod && mod.default) {
               mod.default.enable_guggy = ${enable};
-              console.log('[Zalo-F12-Tools] Guggy ${enable ? 'ON' : 'OFF'}');
+              var msg = '[Zalo-F12-Tools] Guggy ${enable ? 'ON' : 'OFF'}';
+              window.console && window.console.log(msg);
+              try {
+                var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+                if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                  var windowId = '1';
+                  ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                    textKey: msg,
+                    type: ToastNS.TOAST_TYPE.INFO,
+                    duration: 2000
+                  });
+                }
+              } catch (_) {}
             } else {
               console.log('[Zalo-F12-Tools] NDmK module not found');
             }
@@ -186,7 +258,19 @@ chrome.runtime.onMessage.addListener((msg) => {
             var mod = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["NDmK"]]]);
             if (mod && mod.default && mod.default.tfe) {
               mod.default.tfe.enable_edit = ${enable};
-              console.log('[Zalo-F12-Tools] Text File Editor ${enable ? 'ON' : 'OFF'}');
+              var msg = '[Zalo-F12-Tools] Text File Editor ${enable ? 'ON' : 'OFF'}';
+              window.console && window.console.log(msg);
+              try {
+                var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+                if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                  var windowId = '1';
+                  ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                    textKey: msg,
+                    type: ToastNS.TOAST_TYPE.INFO,
+                    duration: 2000
+                  });
+                }
+              } catch (_) {}
             } else {
               console.log('[Zalo-F12-Tools] NDmK module or tfe not found');
             }

@@ -1,39 +1,46 @@
 {
-    "name": "Zalo F12 Tools",
-    "version": "1.0.0",
-    "description": "Turn on/off hidden modes for Zalo Web",
-    "manifest_version": 3,
-    "homepage_url": "https://github.com/JustKemForFun/Zalo-F12-Tools/",
-    "permissions": ["activeTab", "scripting", "storage"],
-    "host_permissions": [
-      "https://chat.zalo.me/*"
-    ],
-    "icons": {
-		"16": "images/icon-16.png",
-		"32": "images/icon-32.png",
-		"64": "images/icon-64.png",
-		"128": "images/icon-128.png",
-		"192": "images/icon-192.png",
-		"384": "images/icon-384.png"
-	},
-    "action": {
-		"default_icon": {
-			"384": "images/icon-384.png"
-		},
-		"default_popup": "popup.html"
-	},
-    "content_scripts": [
-      {
-        "matches": ["https://chat.zalo.me/*"],
-        "js": ["js/content.js"]
-      }
-    ],
-    "externally_connectable": {
-		"matches": [
-			"http://localhost:3008/*",
-			"http://127.0.0.1:3008/*"
-		]
-	},
-	"incognito": "spanning"
-  }
-  
+  "name": "Zalo F12 Tools",
+  "version": "1.0.2",
+  "description": "Turn on/off hidden modes for Zalo Web",
+  "manifest_version": 3,
+  "homepage_url": "https://github.com/JustKemForFun/Zalo-F12-Tools/",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://chat.zalo.me/*"
+  ],
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "64": "images/icon-64.png",
+    "128": "images/icon-128.png",
+    "192": "images/icon-192.png",
+    "384": "images/icon-384.png"
+  },
+  "action": {
+    "default_icon": {
+      "384": "images/icon-384.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.zalo.me/*"
+      ],
+      "js": [
+        "js/content.js"
+      ]
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "http://localhost:3008/*",
+      "http://127.0.0.1:3008/*"
+    ]
+  },
+  "incognito": "spanning"
+}

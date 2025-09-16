@@ -43,6 +43,7 @@ function restoreAll() {
   ];
   chrome.storage.local.get(keys, (res) => {
     keys.forEach((k) => setToggle(k, res[k]));
+    // Do NOT auto-trigger changes on open to avoid unwanted toasts/logs
   });
 }
 // Ensure restore runs even if DOMContentLoaded already fired
@@ -126,6 +127,17 @@ document.getElementById("embedYoutube").addEventListener("change", (e) => {
             mod.default.embed_pop.enable_youtube = isEnabledArg ? 1 : 0;
             var msg = '[Zalo-F12-Tools] Embed YouTube ' + (isEnabledArg ? 'ON' : 'OFF');
             window.console && window.console.log(msg);
+            try {
+              var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+              if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                var windowId = '1';
+                ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                  textKey: msg,
+                  type: ToastNS.TOAST_TYPE.INFO,
+                  duration: 2000
+                });
+              } else if (typeof alert !== 'undefined') { alert(msg); }
+            } catch (_) {}
           }
         } catch (err) { window.console && window.console.error(err); }
       });
@@ -153,6 +165,17 @@ document.getElementById("embedSoundcloud").addEventListener("change", (e) => {
             mod.default.embed_pop.enable_soundcloud = isEnabledArg ? 1 : 0;
             var msg = '[Zalo-F12-Tools] Embed SoundCloud ' + (isEnabledArg ? 'ON' : 'OFF');
             window.console && window.console.log(msg);
+            try {
+              var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+              if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                var windowId = '1';
+                ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                  textKey: msg,
+                  type: ToastNS.TOAST_TYPE.INFO,
+                  duration: 2000
+                });
+              } else if (typeof alert !== 'undefined') { alert(msg); }
+            } catch (_) {}
           }
         } catch (err) { window.console && window.console.error(err); }
       });
@@ -180,6 +203,17 @@ document.getElementById("embedSettings").addEventListener("change", (e) => {
             mod.default.embed_pop.enable_settings = isEnabledArg ? 1 : 0;
             var msg = '[Zalo-F12-Tools] Embed Settings ' + (isEnabledArg ? 'ON' : 'OFF');
             window.console && window.console.log(msg);
+            try {
+              var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+              if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                var windowId = '1';
+                ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                  textKey: msg,
+                  type: ToastNS.TOAST_TYPE.INFO,
+                  duration: 2000
+                });
+              } else if (typeof alert !== 'undefined') { alert(msg); }
+            } catch (_) {}
           }
         } catch (err) { window.console && window.console.error(err); }
       });
@@ -211,6 +245,17 @@ document.getElementById("embedZing").addEventListener("change", (e) => {
             }
             var msg = '[Zalo-F12-Tools] Embed Zing MP3 ' + (isEnabledArg ? 'ON' : 'OFF');
             window.console && window.console.log(msg);
+            try {
+              var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+              if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                var windowId = '1';
+                ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                  textKey: msg,
+                  type: ToastNS.TOAST_TYPE.INFO,
+                  duration: 2000
+                });
+              } else if (typeof alert !== 'undefined') { alert(msg); }
+            } catch (_) {}
           }
         } catch (err) { window.console && window.console.error(err); }
       });
@@ -238,6 +283,17 @@ document.getElementById("photoViewerPopup").addEventListener("change", (e) => {
             mod.default.enable_photoviewer_popup = isEnabledArg ? 1 : 0;
             var msg = '[Zalo-F12-Tools] PhotoViewer Popup ' + (isEnabledArg ? 'ON' : 'OFF');
             window.console && window.console.log(msg);
+            try {
+              var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+              if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                var windowId = '1';
+                ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                  textKey: msg,
+                  type: ToastNS.TOAST_TYPE.INFO,
+                  duration: 2000
+                });
+              } else if (typeof alert !== 'undefined') { alert(msg); }
+            } catch (_) {}
           }
         } catch (err) { window.console && window.console.error(err); }
       });
@@ -265,6 +321,17 @@ document.getElementById("guggy").addEventListener("change", (e) => {
             mod.default.enable_guggy = isEnabledArg ? 1 : 0;
             var msg = '[Zalo-F12-Tools] Guggy ' + (isEnabledArg ? 'ON' : 'OFF');
             window.console && window.console.log(msg);
+            try {
+              var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+              if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                var windowId = '1';
+                ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                  textKey: msg,
+                  type: ToastNS.TOAST_TYPE.INFO,
+                  duration: 2000
+                });
+              } else if (typeof alert !== 'undefined') { alert(msg); }
+            } catch (_) {}
           }
         } catch (err) { window.console && window.console.error(err); }
       });
@@ -292,6 +359,17 @@ document.getElementById("tfeEdit").addEventListener("change", (e) => {
             mod.default.tfe.enable_edit = isEnabledArg ? 1 : 0;
             var msg = '[Zalo-F12-Tools] Text File Editor ' + (isEnabledArg ? 'ON' : 'OFF');
             window.console && window.console.log(msg);
+            try {
+              var ToastNS = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["Vp9m"]]]);
+              if (ToastNS && ToastNS.ZToastManagerHolder && ToastNS.TOAST_TYPE) {
+                var windowId = '1';
+                ToastNS.ZToastManagerHolder.getZToastManagerByWindowId(windowId).show({
+                  textKey: msg,
+                  type: ToastNS.TOAST_TYPE.INFO,
+                  duration: 2000
+                });
+              } else if (typeof alert !== 'undefined') { alert(msg); }
+            } catch (_) {}
           }
         } catch (err) { window.console && window.console.error(err); }
       });
