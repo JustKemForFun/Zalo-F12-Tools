@@ -1,0 +1,15 @@
+body {
+  margin: 12px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+h2 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+.toggle {
+  margin: 6px 0;
+}
+
