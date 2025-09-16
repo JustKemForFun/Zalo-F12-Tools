@@ -170,7 +170,7 @@ function restoreAll() {
       if (!tab || !tab.url || !tab.url.startsWith('https://chat.zalo.me/')) return;
       const enabledKeys = keys.filter((k) => !!res[k]);
       for (const k of enabledKeys) {
-        await applyToggleOnTab(tab, k, true, true);
+        await applyToggleOnTab(tab, k, true, false);
       }
     });
   });
