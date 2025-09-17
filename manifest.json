@@ -1,7 +1,7 @@
 {
   "name": "Zalo F12 Tools",
-  "version": "1.0.2",
-  "description": "Turn on/off hidden modes for Zalo Web",
+  "version": "1.0.3",
+  "description": "Turn ON/OFF hidden modes for Zalo Web",
   "manifest_version": 3,
   "homepage_url": "https://github.com/JustKemForFun/Zalo-F12-Tools/",
   "permissions": [
@@ -24,7 +24,8 @@
     "default_icon": {
       "384": "images/icon-384.png"
     },
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "Zalo F12 Tools - Enhanced UI"
   },
   "content_scripts": [
     {
@@ -39,7 +40,9 @@
   "externally_connectable": {
     "matches": [
       "http://localhost:3008/*",
-      "http://127.0.0.1:3008/*"
+      "http://127.0.0.1:3008/*",
+      "http://localhost:8315/*",
+      "http://127.0.0.1:8315/*"
     ]
   },
   "incognito": "spanning"

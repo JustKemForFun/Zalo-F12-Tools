@@ -1,35 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zalo F12 Tools</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <h2>Zalo F12 Tools</h2>
-    <div class="toggle">
-      <label><input type="checkbox" id="adminMode"> Admin Mode</label>
+    <div class="container">
+      <header class="header">
+        <h2>Zalo F12 Tools</h2>
+        <div class="subtitle">Công cụ mở rộng cho Zalo Web</div>
+        <div class="version-info">
+          <span class="version-badge" id="versionBadge">v1.0.3</span>
+          <span class="status-indicator" id="statusIndicator">●</span>
+        </div>
+      </header>
+      
+      <main>
+        <div class="toggle">
+          <label>
+            <input type="checkbox" id="adminMode">
+            <div class="toggle-switch"></div>
+            <div class="toggle-icon">🔧</div>
+            <div class="toggle-label">Admin Mode</div>
+          </label>
+        </div>
+        
+        <div class="toggle">
+          <label>
+            <input type="checkbox" id="embedYoutube">
+            <div class="toggle-switch"></div>
+            <div class="toggle-icon">📺</div>
+            <div class="toggle-label">Embed YouTube</div>
+          </label>
+        </div>
+        
+        <div class="toggle">
+          <label>
+            <input type="checkbox" id="embedSoundcloud">
+            <div class="toggle-switch"></div>
+            <div class="toggle-icon">🎵</div>
+            <div class="toggle-label">Embed SoundCloud</div>
+          </label>
+        </div>
+        
+        <div class="toggle">
+          <label>
+            <input type="checkbox" id="embedSettings">
+            <div class="toggle-switch"></div>
+            <div class="toggle-icon">⚙️</div>
+            <div class="toggle-label">Show Embed Settings</div>
+          </label>
+        </div>
+        
+        <div class="toggle">
+          <label>
+            <input type="checkbox" id="embedZing">
+            <div class="toggle-switch"></div>
+            <div class="toggle-icon">🎶</div>
+            <div class="toggle-label">Embed Zing MP3</div>
+          </label>
+        </div>
+        
+        <div class="toggle">
+          <label>
+            <input type="checkbox" id="photoViewerPopup">
+            <div class="toggle-switch"></div>
+            <div class="toggle-icon">🖼️</div>
+            <div class="toggle-label">PhotoViewer Popup</div>
+          </label>
+        </div>
+        
+        <div class="toggle">
+          <label>
+            <input type="checkbox" id="guggy">
+            <div class="toggle-switch"></div>
+            <div class="toggle-icon">😀</div>
+            <div class="toggle-label">Guggy Stickers</div>
+          </label>
+        </div>
+        
+        <div class="toggle">
+          <label>
+            <input type="checkbox" id="tfeEdit">
+            <div class="toggle-switch"></div>
+            <div class="toggle-icon">📝</div>
+            <div class="toggle-label">Text File Editor</div>
+          </label>
+        </div>
+      </main>
+      
+      <footer class="footer">
+        <div class="version">v1.0.3</div>
+        <div>Made with ❤️ for Zalo Community</div>
+      </footer>
     </div>
-    <div class="toggle">
-      <label><input type="checkbox" id="embedYoutube"> Embed YouTube</label>
-    </div>
-    <div class="toggle">
-      <label><input type="checkbox" id="embedSoundcloud"> Embed SoundCloud</label>
-    </div>
-    <div class="toggle">
-      <label><input type="checkbox" id="embedSettings"> Show Embed Settings</label>
-    </div>
-    <div class="toggle">
-      <label><input type="checkbox" id="embedZing"> Embed Zing MP3</label>
-    </div>
-    <div class="toggle">
-      <label><input type="checkbox" id="photoViewerPopup"> PhotoViewer Popup</label>
-    </div>
-    <div class="toggle">
-      <label><input type="checkbox" id="guggy"> Guggy Stickers</label>
-    </div>
-    <div class="toggle">
-      <label><input type="checkbox" id="tfeEdit"> Text File Editor</label>
-    </div>
+    
     <script src="./js/popup.js"></script>
   </body>
 </html>

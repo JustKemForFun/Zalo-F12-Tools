@@ -164,6 +164,7 @@ function restoreAll() {
   ];
   chrome.storage.local.get(keys, (res) => {
     keys.forEach((k) => setToggle(k, res[k]));
+    updateActiveFeaturesCount(); // Update counter after restore
     // Re-apply ONLY enabled toggles on open (show toast), don't send OFF
     chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
       const tab = tabs && tabs[0];
@@ -175,68 +176,96 @@ function restoreAll() {
     });
   });
 }
-// Ensure restore runs even if DOMContentLoaded already fired
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', restoreAll);
-} else {
-  restoreAll();
+// Auto-load version from manifest
+function loadVersionFromManifest() {
+  chrome.runtime.getManifest((manifest) => {
+    const versionElement = document.getElementById('versionBadge');
+    if (versionElement) {
+      versionElement.textContent = `v${manifest.version}`;
+    }
+  });
 }
 
-document.getElementById("adminMode").addEventListener("change", (e) => {
-  chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
-    const tab = tabs && tabs[0];
-    if (!tab) return;
-    const isEnabled = e.target.checked;
-    persist('adminMode', isEnabled);
-    await applyToggleOnTab(tab, 'adminMode', isEnabled, true);
+// Count active features
+function updateActiveFeaturesCount() {
+  const toggleIds = [
+    'adminMode',
+    'embedYoutube', 
+    'embedSoundcloud',
+    'embedSettings',
+    'embedZing',
+    'photoViewerPopup',
+    'guggy',
+    'tfeEdit'
+  ];
+  
+  let activeCount = 0;
+  toggleIds.forEach(id => {
+    const element = document.getElementById(id);
+    if (element && element.checked) {
+      activeCount++;
+    }
   });
+  
+  const activeFeaturesElement = document.getElementById('activeFeatures');
+  if (activeFeaturesElement) {
+    activeFeaturesElement.textContent = activeCount;
+  }
+}
+
+// Initialize all features
+function initializeUI() {
+  loadVersionFromManifest();
+  restoreAll();
+  updateActiveFeaturesCount();
+}
+
+// Ensure restore runs even if DOMContentLoaded already fired
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeUI);
+} else {
+  initializeUI();
+}
+
+// Add event listeners for all toggles
+const toggleIds = [
+  'adminMode',
+  'embedYoutube', 
+  'embedSoundcloud',
+  'embedSettings',
+  'embedZing',
+  'photoViewerPopup',
+  'guggy',
+  'tfeEdit'
+];
+
+toggleIds.forEach(id => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.addEventListener("change", async (e) => {
+      const isEnabled = e.target.checked;
+      persist(id, isEnabled);
+      updateActiveFeaturesCount(); // Update counter when toggle changes
+      
+      chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
+        const tab = tabs && tabs[0];
+        if (!tab) return;
+        await applyToggleOnTab(tab, id, isEnabled, true);
+      });
+    });
+  }
 });
 
-document.getElementById("embedYoutube").addEventListener("change", async (e) => {
-  persist('embedYoutube', e.target.checked);
-  chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
-    await applyToggleOnTab(tabs && tabs[0], 'embedYoutube', e.target.checked, true);
-  });
+// Add feedback link functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const feedbackLink = document.getElementById('feedbackLink');
+  if (feedbackLink) {
+    feedbackLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      chrome.tabs.create({ 
+        url: 'https://github.com/JustKemForFun/Zalo-F12-Tools/issues/new' 
+      });
+    });
+  }
 });
 
-document.getElementById("embedSoundcloud").addEventListener("change", (e) => {
-  persist('embedSoundcloud', e.target.checked);
-  chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
-    await applyToggleOnTab(tabs && tabs[0], 'embedSoundcloud', e.target.checked, true);
-  });
-});
-
-document.getElementById("embedSettings").addEventListener("change", (e) => {
-  persist('embedSettings', e.target.checked);
-  chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
-    await applyToggleOnTab(tabs && tabs[0], 'embedSettings', e.target.checked, true);
-  });
-});
-
-document.getElementById("embedZing").addEventListener("change", (e) => {
-  persist('embedZing', e.target.checked);
-  chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
-    await applyToggleOnTab(tabs && tabs[0], 'embedZing', e.target.checked, true);
-  });
-});
-
-document.getElementById("photoViewerPopup").addEventListener("change", (e) => {
-  persist('photoViewerPopup', e.target.checked);
-  chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
-    await applyToggleOnTab(tabs && tabs[0], 'photoViewerPopup', e.target.checked, true);
-  });
-});
-
-document.getElementById("guggy").addEventListener("change", (e) => {
-  persist('guggy', e.target.checked);
-  chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
-    await applyToggleOnTab(tabs && tabs[0], 'guggy', e.target.checked, true);
-  });
-});
-
-document.getElementById("tfeEdit").addEventListener("change", (e) => {
-  persist('tfeEdit', e.target.checked);
-  chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
-    await applyToggleOnTab(tabs && tabs[0], 'tfeEdit', e.target.checked, true);
-  });
-});
