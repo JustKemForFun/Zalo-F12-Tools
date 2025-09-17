@@ -4,7 +4,10 @@
 > [!Note]
 Zalo F12 Tools là tiện ích mở rộng giúp bật/tắt nhanh các chế độ ẩn trên Zalo Web.
 
-## Tính năng
+## Overview
+**Zalo-F12-Tools** is a tool turn ON/OFF hidden modes for Zalo Web
+
+## Features
 
 - **Admin Mode**: Bật chế độ quản trị ẩn trên Zalo Web.
 - **Embed YouTube / SoundCloud / Zing MP3**: Cho phép nhúng nội dung đa phương tiện.
@@ -35,11 +38,8 @@ git clone https://github.com/JustKemForFun/Zalo-F12-Tools/
 
 ## Troubleshooting
 
-If you encounter any issues or have suggestions for improvements, please [create an issue](https://github.com/JustKemForFun/ZaloDataExtractor/issues).
+If you encounter any issues or have suggestions for improvements, please [create an issue](https://github.com/JustKemForFun/Zalo-F12-Tools/issues).
 
-<!-- ## Contributing
-
-We welcome contributions from the community. -->
 ## Contributors & Feedback
 
 We welcome contributions from the community.
