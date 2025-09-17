@@ -1,12 +1,13 @@
 <h1 align="center"><img src="./images/icon-384.png" width="22px"> Zalo-F12-Tools</h1>
 <img align='right' src="./images/icon-384.png" width="75" height="75">
 
-> Zalo F12 Tools is a browser extension that quickly toggles hidden modes on Zalo Web with a clean and friendly UI.
+> [!Note]
+**Zalo-F12-Tools** is a tool turn ON/OFF hidden modes for Zalo Web
 
 ---
 
 ## Overview
-**Zalo-F12-Tools** is a tool turn ON/OFF hidden modes for Zalo Web
+**Zalo-F12-Tools** is a tool turn ON/OFF hidden modes for Zalo Web.
 
 ---
 
