@@ -11,6 +11,9 @@ The purpose of this repository is to be used in conjunction with the [Zalo-F12](
 
 ---
 
+> [!IMPORTANT]
+Every time you turn on any modes, select any user/group chat to use. Also, when you reload page your need click choose popup `Zalo-F12-Tools` extension to automatically rerun enabled modes.
+
 ## Features
 
 - **Admin Mode**: Enable the hidden admin mode on Zalo Web.
