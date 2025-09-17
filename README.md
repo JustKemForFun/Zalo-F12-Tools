@@ -4,8 +4,12 @@
 > [!Note]
 Zalo F12 Tools là tiện ích mở rộng giúp bật/tắt nhanh các chế độ ẩn trên Zalo Web.
 
+---
+
 ## Overview
 **Zalo-F12-Tools** is a tool turn ON/OFF hidden modes for Zalo Web
+
+---
 
 ## Features
 
@@ -15,6 +19,8 @@ Zalo F12 Tools là tiện ích mở rộng giúp bật/tắt nhanh các chế đ
 - **PhotoViewer Popup**: Bật chế độ xem ảnh dạng popup.
 - **Guggy Stickers**: Kích hoạt tìm kiếm sticker từ Guggy.
 - **Text File Editor**: Bật chỉnh sửa tệp văn bản.
+
+---
 
 ## Installation
 
@@ -26,19 +32,27 @@ git clone https://github.com/JustKemForFun/Zalo-F12-Tools/
 - Enable "**Developer mode**" in the top right corner.
 - Click on "**Load unpacked**" and select the folder where you cloned or downloaded the extension.
 
+---
+
 ## Usage
 
 - Open Zalo Web in your *Chrome browser* or *Egde browser*.
 - Click on **Extension** and press *Refresh Page* to start getting information.
 - If you use incognito browser please enable incognito browsing in `chrome://extension` or `edge://extensions/` into the address bar.
 
+---
+
 ## Icons
 
 - The extension comes with various icons to match different sizes (16px, 32px, 64px, 128px, 192px, 384px).
 
+---
+
 ## Troubleshooting
 
 If you encounter any issues or have suggestions for improvements, please [create an issue](https://github.com/JustKemForFun/Zalo-F12-Tools/issues).
+
+---
 
 ## Contributors & Feedback
 
@@ -49,6 +63,8 @@ We welcome contributions from the community.
 | Name               | GitHub Profile                              | Avatar                                 |
 |--------------------|---------------------------------------------|----------------------------------------|
 |     Hoàng Hào      | [Kem](https://www.github.com/JustKemForFun) | <img src="https://avatars.githubusercontent.com/u/136668112" alt="Hoàng Hào" width="50" height="50" /> |
+
+---
 
 ## License
 
