@@ -2,7 +2,7 @@
 <img align='right' src="./images/icon-384.png" width="75" height="75">
 
 > [!Note]
-**Zalo-F12-Tools** is a tool turn ON/OFF hidden modes for Zalo Web
+The purpose of this repository is to be used in conjunction with the [Zalo-F12](https://github.com/ElectroHeavenVN/Zalo-F12), significantly increasing its effectiveness.<br>Feel free to adjust any sections if needed!
 
 ---
 
