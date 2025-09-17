@@ -148,7 +148,13 @@ function setToggle(id, checked) {
 }
 
 function persist(id, checked) {
-  chrome.storage.local.set({ [id]: !!checked });
+  chrome.storage.local.set({ [id]: !!checked }, () => {
+    if (chrome.runtime.lastError) {
+      console.error('[Zalo-F12-Tools] Storage error:', chrome.runtime.lastError);
+    } else {
+      console.log(`[Zalo-F12-Tools] Saved ${id}: ${!!checked}`);
+    }
+  });
 }
 
 function restoreAll() {
@@ -163,6 +169,12 @@ function restoreAll() {
     'tfeEdit'
   ];
   chrome.storage.local.get(keys, (res) => {
+    if (chrome.runtime.lastError) {
+      console.error('[Zalo-F12-Tools] Storage get error:', chrome.runtime.lastError);
+      return;
+    }
+    
+    console.log('[Zalo-F12-Tools] Restored settings:', res);
     keys.forEach((k) => setToggle(k, res[k]));
     updateActiveFeaturesCount(); // Update counter after restore
     // Re-apply ONLY enabled toggles on open (show toast), don't send OFF
@@ -178,12 +190,14 @@ function restoreAll() {
 }
 // Auto-load version from manifest
 function loadVersionFromManifest() {
-  chrome.runtime.getManifest((manifest) => {
-    const versionElement = document.getElementById('versionBadge');
-    if (versionElement) {
-      versionElement.textContent = `v${manifest.version}`;
-    }
-  });
+  const manifest = chrome.runtime.getManifest();
+  const version = `v${manifest.version}`;
+  
+  // Update header version badge
+  const versionElement = document.getElementById('versionBadge');
+  if (versionElement) {
+    versionElement.textContent = version;
+  }
 }
 
 // Count active features
@@ -256,16 +270,5 @@ toggleIds.forEach(id => {
   }
 });
 
-// Add feedback link functionality
-document.addEventListener('DOMContentLoaded', () => {
-  const feedbackLink = document.getElementById('feedbackLink');
-  if (feedbackLink) {
-    feedbackLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      chrome.tabs.create({ 
-        url: 'https://github.com/JustKemForFun/Zalo-F12-Tools/issues/new' 
-      });
-    });
-  }
-});
+// Feedback links are now handled directly in HTML
 

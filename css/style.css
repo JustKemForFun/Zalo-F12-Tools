@@ -227,9 +227,6 @@ body {
   margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid #e9ecef;
-}
-
-.footer-content {
   text-align: center;
 }
 
@@ -247,11 +244,18 @@ body {
   font-size: 11px;
   font-weight: 500;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .footer-link:hover {
   color: #764ba2;
   text-decoration: underline;
+}
+
+.footer-icon {
+  font-size: 12px;
 }
 
 .separator {
@@ -260,8 +264,10 @@ body {
 }
 
 .footer-text {
-  font-size: 10px;
+  font-size: 12px;
   color: #6c757d;
+  text-align: center;
+  margin: 0;
 }
 
 /* Animation for toggles */
