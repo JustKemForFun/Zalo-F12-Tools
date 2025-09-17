@@ -16,11 +16,11 @@ Every time you turn on any modes, select any user/group chat to use. Also, when 
 
 ## Features
 
-- **Admin Mode**: Enable the hidden admin mode on Zalo Web.
+- **Developer Mode**: Enable the hidden dev mode on Zalo Web.
 - **Embed YouTube / SoundCloud / Zing MP3**: Allow embedding rich media content.
 - **Show Embed Settings**: Display additional embed configuration.
 - **PhotoViewer Popup**: Enable a popup-style photo viewer.
-- **Guggy Stickers**: Turn on sticker search via Guggy.
+- **Guggy Stickers**: Enable sticker search via Guggy.
 - **Text File Editor**: Enable editing for text file messages.
 
 ---

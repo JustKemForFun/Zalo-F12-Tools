@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener((msg) => {
             var mod = window.webpackJsonp && window.webpackJsonp.push([[Math.random()],{},[["NDmK"]]]);
             if (mod && mod.default) {
               mod.default.adminMode = ${enable};
-              var msg = '[Zalo-F12-Tools] Admin Mode ${enable ? 'ON' : 'OFF'}';
+              var msg = '[Zalo-F12-Tools] Developer Mode ${enable ? 'ON' : 'OFF'}';
               window.console && window.console.log(msg);
               window.console && window.console.info(msg);
               try {

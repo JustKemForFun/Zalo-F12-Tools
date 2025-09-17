@@ -61,8 +61,8 @@ async function applyToggleOnTab(tab, key, isEnabled, withToast) {
       switch (toggleKey) {
         case 'admin':
           mod.default.adminMode = isEnabledArg ? 1 : 0;
-          log(msgOf('Admin Mode', isEnabledArg));
-          if (showToast) toast(msgOf('Admin Mode', isEnabledArg));
+          log(msgOf('Developer Mode', isEnabledArg));
+          if (showToast) toast(msgOf('Developer Mode', isEnabledArg));
           break;
         case 'youtube':
           if (mod.default.embed_pop) {
