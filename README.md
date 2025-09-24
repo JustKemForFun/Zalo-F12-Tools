@@ -65,7 +65,7 @@ We welcome contributions from the community.
 
 | Name               | GitHub Profile                              | Avatar                                 |
 |--------------------|---------------------------------------------|----------------------------------------|
-|     Hoàng Hào      | [Kem](https://www.github.com/JustKemForFun) | <img src="https://avatars.githubusercontent.com/u/136668112" alt="Hoàng Hào" width="50" height="50" /> |
+|     Hoàng Hào      | [JustKemForFun](https://www.github.com/JustKemForFun) | <img src="https://avatars.githubusercontent.com/u/136668112" alt="Hoàng Hào" width="50" height="50" /> |
 
 ---
 
